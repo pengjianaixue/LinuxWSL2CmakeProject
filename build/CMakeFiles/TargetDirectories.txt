@@ -1,6 +1,0 @@
-/home/jianpeng/workspace/build/CMakeFiles/edit_cache.dir
-/home/jianpeng/workspace/build/CMakeFiles/package_source.dir
-/home/jianpeng/workspace/build/CMakeFiles/rebuild_cache.dir
-/home/jianpeng/workspace/build/CMakeFiles/package.dir
-/home/jianpeng/workspace/build/CMakeFiles/dylibTest.dir
-/home/jianpeng/workspace/build/CMakeFiles/linux_cpp.dir
