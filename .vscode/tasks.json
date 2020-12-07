@@ -3,15 +3,17 @@
         {
             "type": "cppbuild",
             "label": "C/C++: g++ build",
-            "command": "/usr/bin/g++",
+            "command": "/usr/bin/cmake",
             "args": [
-                "-g",
-                "'-Wall'",
-                "'-std=c++17'",  //使用c++17标准编译
-                "${workspaceFolder}/Cpp/Class/*.cc",
-                "${workspaceFolder}/Cpp/*.cc",
-                "-o",
-                "${fileDirname}/${fileBasenameNoExtension}"
+                "--build",
+                "/home/jianpeng/workspace/build",
+                "--config",  //使用c++17标准编译
+                "Debug",
+                "--target",
+                "linux_cpp",
+                "--",
+                "-j",
+                "10"
             ],
             "options": {
                 "cwd": "/usr/bin"

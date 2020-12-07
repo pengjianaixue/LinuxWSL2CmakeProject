@@ -2,4 +2,4 @@
 #include<atomic>
 #include<string>
 #include<iostream>
-void executeApp(const std::string& programPath);
+ extern "C" void executeApp(const char* programPath);

@@ -2,7 +2,7 @@
 	"artifacts" : 
 	[
 		{
-			"path" : "libdylibTest.so"
+			"path" : "linux_cpp"
 		}
 	],
 	"backtrace" : 1,
@@ -10,7 +10,7 @@
 	{
 		"commands" : 
 		[
-			"add_library"
+			"add_executable"
 		],
 		"files" : 
 		[
@@ -24,7 +24,7 @@
 			{
 				"command" : 0,
 				"file" : 0,
-				"line" : 6,
+				"line" : 8,
 				"parent" : 0
 			}
 		]
@@ -35,13 +35,7 @@
 			"compileCommandFragments" : 
 			[
 				{
-					"fragment" : "-g -fPIC  "
-				}
-			],
-			"defines" : 
-			[
-				{
-					"define" : "dylibTest_EXPORTS"
+					"fragment" : "-g  "
 				}
 			],
 			"language" : "CXX",
@@ -53,20 +47,28 @@
 			]
 		}
 	],
-	"id" : "dylibTest::@6890427a1f51a3e7e1df",
+	"id" : "linux_cpp::@6890427a1f51a3e7e1df",
 	"link" : 
 	{
 		"commandFragments" : 
 		[
 			{
-				"fragment" : "",
+				"fragment" : "-g",
 				"role" : "flags"
+			},
+			{
+				"fragment" : "-rdynamic",
+				"role" : "flags"
+			},
+			{
+				"fragment" : "-ldl",
+				"role" : "libraries"
 			}
 		],
 		"language" : "CXX"
 	},
-	"name" : "dylibTest",
-	"nameOnDisk" : "libdylibTest.so",
+	"name" : "linux_cpp",
+	"nameOnDisk" : "linux_cpp",
 	"paths" : 
 	{
 		"build" : ".",
@@ -105,5 +107,5 @@
 			"sourceGroupIndex" : 0
 		}
 	],
-	"type" : "SHARED_LIBRARY"
+	"type" : "EXECUTABLE"
 }

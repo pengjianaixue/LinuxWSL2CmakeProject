@@ -1,6 +1,6 @@
 #include"posixApiCall.h"
 
-void executeApp(const std::string& programPath)
+extern "C" void executeApp(const char* programPath)
 {
     std::cout << programPath << std::endl;
 }
