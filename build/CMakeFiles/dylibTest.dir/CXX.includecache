@@ -1,0 +1,46 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/jianpeng/workspace/Cpp/Class/CallTest.cc
+CallTest.h
+/home/jianpeng/workspace/Cpp/Class/CallTest.h
+
+/home/jianpeng/workspace/Cpp/Class/CallTest.h
+iostream
+-
+memory
+-
+atomic
+-
+functional
+-
+
+/home/jianpeng/workspace/Cpp/Class/posixApiCall.cc
+posixApiCall.h
+/home/jianpeng/workspace/Cpp/Class/posixApiCall.h
+
+/home/jianpeng/workspace/Cpp/Class/posixApiCall.h
+unistd.h
+-
+atomic
+-
+string
+-
+iostream
+-
+
+/home/jianpeng/workspace/Cpp/main.cc
+iostream
+-
+unistd.h
+-
+Class/CallTest.h
+/home/jianpeng/workspace/Cpp/Class/CallTest.h
+Class/posixApiCall.h
+/home/jianpeng/workspace/Cpp/Class/posixApiCall.h
+

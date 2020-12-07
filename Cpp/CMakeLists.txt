@@ -1,0 +1,6 @@
+cmake_minimum_required(VERSION 3.0.0)
+project(linux_cpp VERSION 0.1.0)
+AUX_SOURCE_DIRECTORY(. CURRENT_DIR_SRCS)
+AUX_SOURCE_DIRECTORY(./Class CURRENT_DIR_SRCS)
+add_executable(linux_cpp main.cc ${CURRENT_DIR_SRCS})
+add_library(dylibTest SHARED ${CURRENT_DIR_SRCS})
