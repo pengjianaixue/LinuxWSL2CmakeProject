@@ -8,7 +8,7 @@
 int main()
 {
     CallWapper callWapper;
-    using executeAppFun = void(*)(const char*);
+    using executeAppFun = void(*)(const char*,...);
     char current_absolute_path[255];
     if (NULL == realpath("./", current_absolute_path))
     {
@@ -17,7 +17,7 @@ int main()
     }
     strcat(current_absolute_path, "/");
     printf("current absolute path:%s\n", current_absolute_path);
-    void* dlHandle = dlopen("./libdylibTest.so",RTLD_NOW);
+    void* dlHandle = dlopen("/home/jianpeng/workspace/build/libdylibTest.so",RTLD_LAZY);
     if (!dlHandle)
     {
         std::cout << "dl open failed" << std::endl;
@@ -34,6 +34,6 @@ int main()
     
     std::cout << "iostream" << std::endl;
     std::cout << "test" << std::endl;
-    executeApp("Cmake Test");
+    func("dl open","External Paramter");
     
 }
