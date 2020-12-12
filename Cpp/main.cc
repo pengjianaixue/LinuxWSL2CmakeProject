@@ -8,7 +8,7 @@
 int main()
 {
     CallWapper callWapper;
-    using executeAppFun = void(*)(const char*,...);
+    using executeAppFun = void(*)(long long paramter_1,...);
     char current_absolute_path[255];
     if (NULL == realpath("./", current_absolute_path))
     {
@@ -22,18 +22,19 @@ int main()
     {
         std::cout << "dl open failed" << std::endl;
         return -1;
-        /* code */
     }
-    executeAppFun func = (executeAppFun)dlsym(dlHandle,"executeApp");
+    TestStruct testStruct{1,5};
+    int j{0};
+    void* intj = &j;
+    long long paramter_1 = (long long )(&testStruct);
+    executeAppFun func = (executeAppFun)dlsym(dlHandle,"callTest");
     if (!func)
     {
         std::cout << "dl sym failed" << std::endl;
         return -1;
-        /* code */
     }
-    
     std::cout << "iostream" << std::endl;
     std::cout << "test" << std::endl;
-    func("dl open","External Paramter");
+    func(paramter_1,j);
     
 }
