@@ -6,7 +6,7 @@
             "command": "/usr/bin/cmake",
             "args": [
                 "--build",
-                "/home/jianpeng/workspace/build",
+                "${workspaceFolder}/build",
                 "--config",  //使用c++17标准编译
                 "Debug",
                 "--target",
