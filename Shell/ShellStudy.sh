@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/bash
 
 tst="12"
 if [[ -z  ${tst} ]];
