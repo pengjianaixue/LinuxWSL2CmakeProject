@@ -15,9 +15,9 @@ int main()
         printf("***Error***\n");
         exit(-1);
     }
-    strcat(current_absolute_path, "/");
+    strcat(current_absolute_path, "/build/libdylibTest.so");
     printf("current absolute path:%s\n", current_absolute_path);
-    void* dlHandle = dlopen("/home/jianpeng/workspace/build/libdylibTest.so",RTLD_LAZY);
+    void* dlHandle = dlopen(current_absolute_path,RTLD_LAZY);
     if (!dlHandle)
     {
         std::cout << "dl open failed" << std::endl;

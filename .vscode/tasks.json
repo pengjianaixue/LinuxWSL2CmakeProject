@@ -10,7 +10,7 @@
                 "--config",  //使用c++17标准编译
                 "Debug",
                 "--target",
-                "linux_cpp",
+                "Linux_cpp",
                 "--",
                 "-j",
                 "8"
