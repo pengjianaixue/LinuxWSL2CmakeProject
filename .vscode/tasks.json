@@ -6,14 +6,14 @@
             "command": "/usr/bin/cmake",
             "args": [
                 "--build",
-                "/home/jianpeng/workspace/build",
+                "${workspaceFolder}/build",
                 "--config",  //使用c++17标准编译
                 "Debug",
                 "--target",
-                "linux_cpp",
+                "Linux_cpp",
                 "--",
                 "-j",
-                "10"
+                "8"
             ],
             "options": {
                 "cwd": "/usr/bin"

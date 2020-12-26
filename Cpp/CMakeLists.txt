@@ -8,8 +8,8 @@ set_target_properties(${TARGET} PROPERTIES COMPILE_FLAGS "-rdynamic" LINK_FLAGS 
 aux_source_directory(. CURRENT_DIR_SRCS)
 aux_source_directory(./Class CURRENT_DIR_SRCS)
 #main program
-add_executable(linux_cpp main.cc ${CURRENT_DIR_SRCS})
+add_executable(Linux_cpp main.cc ${CURRENT_DIR_SRCS})
 # link dl lib
-target_link_libraries(linux_cpp dl)
+target_link_libraries(Linux_cpp dl)
 
 add_library(dylibTest SHARED ${CURRENT_DIR_SRCS})
