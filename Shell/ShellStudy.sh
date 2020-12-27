@@ -1,4 +1,3 @@
-#!/usr/bin/bash
 tst="12"
 if [[ -z  ${tst} ]]; # 字符串为空
 then
