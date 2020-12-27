@@ -1,11 +1,71 @@
-tst="12"
-if [[ -z  ${tst} ]]; # 字符串为空
+# 条件控制
+# if 语句中，then 语句必须在新行,否者要使用命令分隔符；例如if [[ -z  "${name}" ]]；then ,这样就可以在同一行
+echo "---------- start read input block ----------"
+echo  -e "Please enter the name\n"
+read name #获取用户输入
+echo  -e "---------- end read input block ----------\n"
+echo "*********** start Flow Control block ***********"
+echo "---------- start if block ----------"
+if [[ -z  "${name}" ]] # 字符串为空
 then
     echo "empty"
-elif [[ -n ${tst} ]]; # 字符串不为空 
+elif [[ -n "${name}" ]] # 字符串不为空 
 then
      echo "not empty"
 fi
+if [ $# -gt 0 ] #$# 大于0
+then
+    echo $*
+elif [ $# -lt 2 ]#$# 小于 0
+then
+    echo "param number less than 2"
+fi
+echo -e "---------- end if block ----------\n"
+# while 语句
+echo "---------- start while block ----------"
+loopNumber=10
+while [ ${loopNumber} -gt 0 ] #${loopNumber} 大于0
+do
+    echo "loopNumber: ${loopNumber}"
+    $((loopNumber-=1))
+done
+loopNumber=5
+while (read line) && [ $loopNumber -gt 1 ] 
+do
+    echo $line
+    $((loopNumber-=1))
+done
+
+echo -e "---------- end while block ----------\n"
+# for 语句
+echo "---------- start for block ----------"
+loopNumber=10
+for i in 1 2 3 4 5 6
+do
+    echo "loopIt： ${i}"
+done
+for fileItem in $(ls)
+do
+    echo "fileItem: ${fileItem}"
+done
+echo -e "---------- end for block ----------\n"
+
+#case 语句
+echo "---------- start case block ----------"
+case $loopNumber in
+    1) echo 1
+    ;;
+    2|3) echo 2 or 3
+    ;;
+    10)
+    echo "10"
+    ;;
+    *) echo "default"
+    ;;
+esac
+echo -e "---------- end case block ----------\n"
+
+echo -e "*********** end Flow Control block ***********\n"
 #Calculate expr
 a=100
 b=200
