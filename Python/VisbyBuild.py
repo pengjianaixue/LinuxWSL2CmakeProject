@@ -1,4 +1,3 @@
-#/usr/bin/python3.8
 #!/usr/bin/python
 import sys
 from time import sleep
