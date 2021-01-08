@@ -7,7 +7,7 @@ if __name__ == "__main__":
     child = pexpect.spawn("/home/eijpnae/toolScript/visbyAnd8863AutoBuildImp.sh",timeout=60*30)
     child.logfile = sys.stdout
     child.expect("Is your radoisw repo under path /repo/eijpnae/radiosw")
-    child.send("y\n")
+    child.sendline("y")
     child.expect("#?")
     child.sendline("1")
     child.expect(pexpect.EOF)
