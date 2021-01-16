@@ -6,7 +6,7 @@ set(CMAKE_CXX_STANDARD_REQUIRED True)
 set_target_properties(${TARGET} PROPERTIES COMPILE_FLAGS "-rdynamic" LINK_FLAGS "-rdynamic")
 #source 
 aux_source_directory(. CURRENT_DIR_SRCS)
-aux_source_directory(./Class CURRENT_DIR_SRCS)
+aux_source_directory(./Class/src CURRENT_DIR_SRCS)
 aux_source_directory(./TestFunction CURRENT_DIR_SRCS)
 #main program
 add_executable(Linux_cpp main.cc ${CURRENT_DIR_SRCS})

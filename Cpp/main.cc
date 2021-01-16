@@ -1,12 +1,13 @@
-#include<iostream>
-#include<unistd.h>
-#include"Class/CallTest.h"
-#include"Class/posixApiCall.h"
-#include<dlfcn.h>
+#include <iostream>
+#include <unistd.h>
+#include "Class/inc/CallTest.h"
+#include "Class/inc/posixApiCall.h"
+#include <dlfcn.h>
 #include <stdlib.h>
-#include<vector>
-#include<cstring>
-#include"TestFunction/testCode.h"
+#include <vector>
+#include <cstring>
+#include <atomic>
+#include "TestFunction/testCode.h"
 int main()
 {
     CallWapper callWapper;

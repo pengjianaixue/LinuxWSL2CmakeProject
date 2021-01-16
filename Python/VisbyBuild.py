@@ -9,5 +9,5 @@ if __name__ == "__main__":
     child.expect("Is your radoisw repo under path /repo/eijpnae/radiosw")
     child.sendline("y")
     child.expect("#?")
-    child.sendline("1")
+    child.sendline("5")
     child.expect(pexpect.EOF)
