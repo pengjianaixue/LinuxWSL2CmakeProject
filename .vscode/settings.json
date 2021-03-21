@@ -48,5 +48,12 @@
         "map": "cpp"
     },
     "cmake.sourceDirectory": "${workspaceFolder}/Cpp",
-    "C_Cpp.default.configurationProvider": "ms-vscode.cmake-tools"
+    "C_Cpp.default.configurationProvider": "ms-vscode.cmake-tools",
+    "python.pythonPath": "/usr/bin/python3",
+    "Lua.diagnostics.globals": [
+        "printprint"
+    ],
+    "Lua.diagnostics.disable": [
+        "undefined-global"
+    ]
 }
